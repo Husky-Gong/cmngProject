@@ -21,7 +21,7 @@
     where id = #{id}
   </select>
 
-  <select id="selectList" resultMap="BaseResultMap">
+  <select id="queryPage" resultMap="BaseResultMap">
     <!--@mbg.generated-->
     select
     <include refid="Base_Column_List" />

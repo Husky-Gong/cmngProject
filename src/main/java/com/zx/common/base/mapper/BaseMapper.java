@@ -16,7 +16,7 @@ public interface BaseMapper<V,Q,F> {
      * @param query
      * @return
      */
-    List<V> selectList(Q query);
+    List<V> queryPage(Q query);
 
     /**
      *  添加数据

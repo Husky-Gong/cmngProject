@@ -30,6 +30,7 @@ public class BaseServiceImpl implements IBaseService<Query,Form> {
     public Result queryPage(Query query) {
         //指定页码 每页数据长度
         Page<Object> data = PageHelper.startPage(query.getPage(), query.getLimit());
+        baseMapper.queryPage(query);
         PageInfo pageInfo = new PageInfo(data.getResult(),data.getTotal(),data.getPageNum(),data.getPageSize(),data.getPages());
         return new Result(pageInfo);
     }
